@@ -594,7 +594,7 @@ const EmploymentApplication = (props: Props) => {
 
         <div className="flex flex-row mt-10 mb-20 justify-center">
           <button className="w-1/4 bg-[#003F6C] hover:bg-[#002743] text-white rounded-[10px] montserrat font-semibold text-[14px] leading-[17px] px-[37px] py-[15px]">
-            Submit Membership Registration
+            Submit Application
           </button>
         </div>
 
