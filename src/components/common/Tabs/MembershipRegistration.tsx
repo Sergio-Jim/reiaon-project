@@ -5,7 +5,7 @@ type Props = {}
 const MembershipRegistration = (props: Props) => {
   return (
     <div>
-      <div className="flex flex-col justify-between">
+      {/* <div className="flex flex-col justify-between">
         <div className="mt-3 w-full">
 
           <div>
@@ -381,7 +381,7 @@ const MembershipRegistration = (props: Props) => {
           </button>
         </div>
 
-      </div>
+      </div> */}
     </div>
   )
 }

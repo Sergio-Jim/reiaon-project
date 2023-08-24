@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "assets/img/logo.png";
 import save from "assets/img/icon-save.png"
-import MembershipRegistration from "components/common/Tabs/MembershipRegistration";
+// import MembershipRegistration from "components/common/Tabs/MembershipRegistration";
 import TrainingRegistration from "components/common/Tabs/TrainingRegistration";
 import EmploymentApplication from "components/common/Tabs/EmploymentApplication";
 
@@ -12,12 +12,12 @@ const DashboardPage = (props: Props) => {
   const location = useLocation();
   const path = location.pathname;
 
-  const [activeTab, setActiveTab] = useState("membership-registration");
+  const [activeTab, setActiveTab] = useState("training-registration");
 
   const renderTabContent = () => {
     switch (activeTab) {
-      case "membership-registration":
-        return <MembershipRegistration />;
+      // case "membership-registration":
+      //   return <MembershipRegistration />;
       case "training-registration":
         return <TrainingRegistration />;
       case "employment-application":
@@ -40,7 +40,7 @@ const DashboardPage = (props: Props) => {
         </div>
         <div>
           <div className="flex flex-row justify-around mb-10">
-            <Link
+            {/* <Link
               to={`${path}#membership-registration`}
               className={`text-[#003F6C] tab-btn-choose font-semibold text-[14px] leading-[21px] flex items-center justify-center bg-white rounded-[20px] min-w-[190px] py-[10px] m-auto mb-[21px] ${activeTab === "membership-registration" ? "active-tab-btn" : "border-2 border-black"
                 }`}
@@ -51,7 +51,7 @@ const DashboardPage = (props: Props) => {
               <button>
                 Register Membership
               </button>
-            </Link>
+            </Link> */}
 
             <Link
               to={`${path}#training-registration`}
