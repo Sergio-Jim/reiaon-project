@@ -32,10 +32,16 @@ const DashboardPage = (props: Props) => {
       <div className="flex-col mx-20">
         <div className="flex flex-col">
           <div className="flex flex-row mt-20 mb-8 w-full justify-center"><img src={logo} alt="logo" /></div>
-          <div className="flex flex-row mt-3 mb-10 w-full justify-center">
+          <div className="flex flex-col mt-3 mb-10 w-full justify-center items-center">
             <span>
               REIAoN Interested Candidate Registration
             </span>
+            <p className="w-3/4 flex flex-row justify-center items-center">
+              1) You can register for both training and employment, but submit separately. <br></br>
+              2) You can save and submit later if you need to find a document. <br></br>
+              3) You can submit more than once. <br></br>
+              4) Ensure press "Submit" once you are complete so that you are added to the database list.
+            </p>
           </div>
         </div>
         <div>
@@ -53,31 +59,41 @@ const DashboardPage = (props: Props) => {
               </button>
             </Link> */}
 
-            <Link
-              to={`${path}#training-registration`}
-              className={`text-[#003F6C] tab-btn-choose font-semibold text-[14px] leading-[21px] flex items-center justify-center bg-white rounded-[20px] min-w-[190px] py-[10px] m-auto mb-[21px] ${activeTab === "training-registration" ? "active-tab-btn" : "border-2 border-black"
-                }`}
-              onClick={() => {
-                setActiveTab("training-registration");
-              }}
-            >
-              <button>
-                Register for Training
-              </button>
-            </Link>
+            <div className="flex flex-col w-auto justify-center items-center">
+              <span>
+                Interested in Training?
+              </span>
+              <Link
+                to={`${path}#training-registration`}
+                className={`text-[#003F6C] tab-btn-choose font-semibold text-[14px] leading-[21px] flex items-center justify-center bg-white rounded-[20px] min-w-[190px] py-[10px] m-auto mb-[21px] ${activeTab === "training-registration" ? "active-tab-btn" : "border-2 border-black"
+                  }`}
+                onClick={() => {
+                  setActiveTab("training-registration");
+                }}
+              >
+                <button>
+                  Register On REIAoN Training Database
+                </button>
+              </Link>
+            </div>
 
-            <Link
-              to={`${path}#employment-application`}
-              className={`text-[#003F6C] tab-btn-choose font-semibold text-[14px] leading-[21px] flex items-center justify-center bg-white rounded-[20px] min-w-[190px] py-[10px] m-auto mb-[21px] ${activeTab === "employment-application" ? "active-tab-btn" : "border-2 border-black"
-                }`}
-              onClick={() => {
-                setActiveTab("employment-application");
-              }}
-            >
-              <button>
-                Apply for Employment
-              </button>
-            </Link>
+            <div className="flex flex-col items-center">
+              <span>
+                Interested in Employment?
+              </span>
+              <Link
+                to={`${path}#employment-application`}
+                className={`text-[#003F6C] tab-btn-choose font-semibold text-[14px] leading-[21px] flex items-center justify-center bg-white rounded-[20px] min-w-[190px] py-[10px] m-auto mb-[21px] ${activeTab === "employment-application" ? "active-tab-btn" : "border-2 border-black"
+                  }`}
+                onClick={() => {
+                  setActiveTab("employment-application");
+                }}
+              >
+                <button>
+                  Register on the REIAON Employment Database.
+                </button>
+              </Link>
+            </div>
           </div>
           <div className="flex flex-row justify-between">
             <span>
